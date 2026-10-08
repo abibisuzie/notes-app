@@ -73,4 +73,6 @@ def list_notes():
         rows = conn.execute(
             "SELECT id, text, created_at FROM notes ORDER BY id DESC"
         ).fetchall()
-    return [{"id": r[0], "text": r[1], "created_at": r[2]} for r in rows]
+    return [{"id": r[0], "text": r[1], "created_at": r[2]} for r in rows]gh auth setup-git
+git remote set-url origin https://github.com/abibisuzie/notes-app.git
+git push -u origin main
